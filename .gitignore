@@ -1,0 +1,14 @@
+# Source data and built warehouses never go in git (the warehouse ships as a GitHub release)
+data/*
+!data/README.md
+warehouse/*
+!warehouse/README.md
+*.duckdb
+*.duckdb.wal
+
+# Secrets and local clutter
+.env
+*.key
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
