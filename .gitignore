@@ -1,4 +1,4 @@
-# Source data and built warehouses never go in git (the warehouse ships as a GitHub release)
+# Source files and database files never go in git (BigQuery teams rebuild tables from etl/; DuckDB teams share the file as a GitHub release)
 data/*
 !data/README.md
 warehouse/*

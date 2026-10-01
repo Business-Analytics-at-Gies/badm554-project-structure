@@ -1,10 +1,13 @@
 # data/
 
-Your source files live here on each teammate's machine and are **never committed** (this folder is gitignored).
-Replace this README with instructions a stranger can follow:
+**Most teams do not need this folder.** If your data is a BigQuery public dataset, your queries in `etl/` read it
+directly, and there is nothing to download.
 
-- **What each source file is**, and where to get it (a link, a BigQuery table, a course page).
-- **How to check you got the right file**: the expected size or row count, and a checksum.
-  On macOS or Linux: `shasum -a 256 <file>`; on Windows PowerShell: `Get-FileHash <file>`.
-  A truncated download fails later in ways that look exactly like a bug in your code.
-- **Anything you fetched with a query**: the query itself, so it can be run again.
+Use this folder only if your team brings its own files (a CSV or Parquet download, for example). The files stay on
+each teammate's computer and are **never committed** (this folder is gitignored). Replace this README with
+instructions a stranger can follow:
+
+- **What each file is**, and where to download it.
+- **How to check you got the right file:** its size or row count, and a checksum.
+  On macOS or Linux: `shasum -a 256 <file>`. On Windows PowerShell: `Get-FileHash <file>`.
+  If the check fails, download the file again.

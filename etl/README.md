@@ -1,12 +1,18 @@
 # etl/
 
-The notebook that builds your warehouse, run top to bottom with no manual fixes. Suggested sections, in order:
+The queries (or notebook) that build your tables, run in order with no manual fixes. Number the files so the order
+is obvious, for example:
 
-1. **Extract**: open the source read-only and copy it as it is.
-2. **Transform**: build the dimensions and the fact table at the grain stated in `docs/schema.md`; give the
-   warehouse its own keys.
-3. **Load**: write the tables into `warehouse/<name>.duckdb`, starting from a known state so a second run gives the
-   same row counts as the first.
-4. **Validate**: run the checks in `validation/` or call them from here, and print row counts in and out.
+1. `01_clean_sales.sql`: a **view** that picks the columns you need, fixes types and names, and **fixes the date
+   range** (for example 2022-01-01 to 2025-12-31), so your counts do not change when the public data adds new
+   months.
+2. `02_dim_store.sql`, `03_dim_date.sql`, and so on: your dimension **tables**, built with `CREATE OR REPLACE TABLE`.
+3. `04_fact_sales.sql`: your fact table, at the grain stated in `docs/schema.md`.
+4. A last step that prints the row count of every table, so you can compare with `warehouse/README.md`.
 
-Say at the top of the notebook which files in `data/` it expects and what it produces.
+`CREATE OR REPLACE` means running everything a second time gives the same row counts as the first.
+
+Each teammate can own some of these files. Your commits show your part, and that is what you explain at your
+defense. Anyone on the team should be able to run all of them.
+
+**DuckDB teams:** the same steps in one notebook. Say at the top which files in `data/` it expects and what it builds.
