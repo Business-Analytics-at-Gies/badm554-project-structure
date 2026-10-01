@@ -15,4 +15,4 @@ is obvious, for example:
 Each teammate can own some of these files. Your commits show your part, and that is what you explain at your
 defense. Anyone on the team should be able to run all of them.
 
-**DuckDB teams:** the same steps in one notebook. Say at the top which files in `data/` it expects and what it builds.
+**One notebook is fine too:** put the same steps in order as notebook cells, with a short comment above each. DuckDB teams work this way; say at the top which files in `data/` the notebook expects and what it builds.

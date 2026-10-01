@@ -3,7 +3,7 @@
 **Most teams do not need this folder.** If your data is a BigQuery public dataset, your queries in `etl/` read it
 directly, and there is nothing to download.
 
-Use this folder only if your team brings its own files (a CSV or Parquet download, for example). The files stay on
+Use this folder only if your team brings its own files (a CSV or Parquet download, for example) or keeps some data off the cloud. The files stay on
 each teammate's computer and are **never committed** (this folder is gitignored). Replace this README with
 instructions a stranger can follow:
 

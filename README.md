@@ -9,7 +9,7 @@ You do not have to follow it exactly. Any layout is fine if a stranger can clone
 and rebuild your tables. That is what the final deliverable is graded on.
 
 **Where your data lives:** your project runs on BigQuery by default. Your queries live in your team repo, and
-anyone on the team can run them. DuckDB is optional, for teams that bring their own files. The course page
+anyone on the team can run them. DuckDB is optional, for teams that bring their own files or prefer to keep some data off the cloud. The course page
 [Where Your Team's Data Lives](https://canvas.illinois.edu/courses/70435/pages/where-your-teams-data-lives)
 explains the options.
 
@@ -92,7 +92,7 @@ about but did not write down is a step they will get stuck on.
 1. Clone the repo.
 2. Open BigQuery with your own Google account, and set your own project name in one place (the first cell of the
    notebook, or the top of each query). No one's project name should be written into the queries.
-3. Run the files in `etl/` in order. They read the public dataset and build your tables in your own BigQuery.
+3. Run the files in `etl/` in order (or the one notebook that runs them). They read the public dataset and build your tables in your own BigQuery.
 4. Check your row counts match the ones listed in `warehouse/README.md`.
 5. Run each file in `analyses/`. Each one says which stakeholder question it answers.
 
