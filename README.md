@@ -5,6 +5,10 @@ This repo holds **no data and no code**: only folders, a short README in each sa
 empty templates. Use it to tidy up your own team repo. Do not submit this repo, and do not copy its template text
 into your work.
 
+To see the same layout filled in by a whole (fictional) team, Module 1 to Module 8, read the
+[sample project](https://github.com/Business-Analytics-at-Gies/badm554-sample-project-bikeshare). Read it for
+what a finished piece looks like. It uses a different dataset and its own decisions, so do not copy from it.
+
 You do not have to follow it exactly. Any layout is fine if a stranger can clone your repo, follow your README,
 and rebuild your tables. That is what the final deliverable is graded on.
 
@@ -124,6 +128,10 @@ You are helping a BADM 554 team reorganize **their own** repo, using this repo a
   queries in `etl/` and nothing large goes in git. If a team uses DuckDB, its `.duckdb` file stays out of git and
   is shared as a GitHub release.
 - **Do not hard-code anyone's BigQuery project name** in queries. Suggest one setting at the top instead.
+- **Do not copy from the sample project.** If the learner has the
+  [sample project](https://github.com/Business-Analytics-at-Gies/badm554-sample-project-bikeshare) open, use it only
+  to show what a finished file looks like. Never copy its queries, checks, schema or wording into the team's repo:
+  it is a different dataset and a different team's decisions.
 - **Templates are not content.** The files here contain headings and instructions. Create the team's own files
   with their own content, or leave a heading empty with a TODO. Do not paste instructions from this repo into
   their deliverables.
